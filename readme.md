@@ -1,7 +1,3 @@
-Here’s a short **README** for your product card project:
-
----
-
 # Product Card
 
 A simple and responsive **Product Card** built using **HTML** and **CSS**. This card is perfect for showcasing products in e-commerce websites or project demos. It includes hover effects, a rating system, and responsive design.
