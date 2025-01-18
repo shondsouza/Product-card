@@ -3,22 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Card</title>
+    <title>Enhanced Product Card</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="product-card">
-    <img src="image1.jpg" alt="Product Image" class="product-img" />
-    <h3 class="product-title">Stylish Headphones</h3>
-    <p class="product-description">
-        Experience high-quality sound with these wireless headphones featuring noise-canceling technology.
-    </p>
-    <div class="product-rating">
-        <span class="stars">⭐⭐⭐⭐⭐</span>
-        <span>(120 Reviews)</span>
+    <div class="toast">Notification message</div>
+
+    <div class="controls-container">
+        <button class="control-btn wishlist-btn">
+            <i class="far fa-heart"></i>
+        </button>
+        <button class="control-btn share-btn">
+            <i class="fas fa-share-alt"></i>
+        </button>
+        <div class="share-menu">
+            <button onclick="share('facebook')">
+                <i class="fab fa-facebook"></i>
+                Facebook
+            </button>
+            <button onclick="share('twitter')">
+                <i class="fab fa-twitter"></i>
+                Twitter
+            </button>
+            <button onclick="share('copy')">
+                <i class="fas fa-link"></i>
+                Copy Link
+            </button>
+        </div>
     </div>
-    <div class="product-price">$99.99</div>
-    <button class="add-to-cart-btn">Add to Cart</button>
+
+    <div class="product-images">
+        <img src="image1.jpg" alt="Black Headphones" class="product-img active" data-color="black"/>
+    </div>
+
+    <h3 class="product-title">Premium Wireless Headphones</h3>
+
+    <div class="product-meta">
+        <div class="price-container">
+            <span class="current-price">$99.99</span>
+            <span class="original-price">$129.99</span>
+            <span class="discount">-20%</span>
+        </div>
+    </div>
+
+    <div class="color-options">
+        <div class="option-label">
+            <span>Color: <span class="selected-color-name">Black</span></span>
+            <span class="stock-status">In Stock</span>
+        </div>
+        <div class="color-picker">
+            <div class="color-option selected" data-color="black" style="background-color: #2d3436;"></div>
+            <div class="color-option" data-color="blue" style="background-color: #0984e3;"></div>
+            <div class="color-option" data-color="green" style="background-color: #00b894;"></div>
+        </div>
+    </div>
+
+    <div class="features-list">
+        <div class="feature-item">
+            <i class="fas fa-truck"></i>
+            <span>Free Shipping</span>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-undo"></i>
+            <span>30-Day Return</span>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-shield-alt"></i>
+            <span>2 Year Warranty</span>
+        </div>
+    </div>
+
+    <div class="progress-container">
+        <div class="stock-progress">
+            <div class="stock-level"></div>
+        </div>
+        <div class="stock-text">
+            <span>Stock Level</span>
+            <span>70% Available</span>
+        </div>
+    </div>
+
+    <button class="add-to-cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+        Add to Cart
+    </button>
 </div>
 </body>
 </html>
